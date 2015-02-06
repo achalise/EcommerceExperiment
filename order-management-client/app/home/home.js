@@ -9,6 +9,15 @@ angular.module('orderManagement.home', ['ngRoute'])
   });
 }])
 
-.controller('HomeCtrl', [function() {
-
+.controller('HomeCtrl', ['$scope', function($scope) {
+    $scope.customers = [
+        {
+            'name': 'Ram Sharan',
+            'Id'  : 1
+        },
+        {
+            'name': 'Krishna Ram',
+            'Id'  : 2
+        }
+    ]
 }]);

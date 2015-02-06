@@ -1,2 +1,6 @@
-<b>This will be the landing page for the application.</b>
-<a href="#/view2">Click here for View2</a>
+Customer List:
+<ul class="phones">
+    <li ng-repeat="customer in customers">
+        <span>{{customer.name}}: ID: {{customer.Id}}</span> <a href="#/customer">View Details</a>
+    </li>
+</ul>
