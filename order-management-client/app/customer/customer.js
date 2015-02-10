@@ -3,23 +3,15 @@
 angular.module('orderManagement.customer', ['ngRoute'])
 
     .config(['$routeProvider', function($routeProvider) {
-        $routeProvider.when('/customer', {
+        $routeProvider.when('/customer/:customerId', {
             templateUrl: 'customer/customer.html',
             controller: 'CustomerDetailCtrl'
         });
     }])
 
-    .controller('CustomerDetailCtrl', ['$scope', function($scope) {
-        $scope.customer =
-            {
-                'name': 'Ram Sharan',
-                'Id'  : 1,
-                'address' :
-                    {
-                        'street' : '50 Day Road',
-                        'suburb' : 'Cheltenham',
-                        'postcode' : '2119',
-                        'state'   : 'NSW'
-                    }
-            }
+    .controller('CustomerDetailCtrl', ['$scope', '$routeParams', '$http', function($scope, $routeParams, $http) {
+        $http.get('data/customers.json').success(function(data) {
+            $scope.customer = data[$routeParams.customerId - 1];
+        });
+        $scope.customerId = $routeParams.customerId;
     }]);

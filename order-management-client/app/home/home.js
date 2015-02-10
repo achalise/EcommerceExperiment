@@ -9,15 +9,9 @@ angular.module('orderManagement.home', ['ngRoute'])
   });
 }])
 
-.controller('HomeCtrl', ['$scope', function($scope) {
-    $scope.customers = [
-        {
-            'name': 'Ram Sharan',
-            'Id'  : 1
-        },
-        {
-            'name': 'Krishna Ram',
-            'Id'  : 2
-        }
-    ]
+.controller('HomeCtrl', ['$scope', '$http', function($scope, $http) {
+   $http.get('data/customers.json').success(function(data) {
+     $scope.customers = data;
+   });
 }]);
+
