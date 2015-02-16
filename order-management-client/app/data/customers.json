@@ -1,19 +1,30 @@
 [
     {
         "name": "Ram Sharan",
-        "Id"  : 1
+        "Id"  : 1,
+        "address" : {
+            "street" : "2 George St"
+        }
     },
     {
         "name": "Krishna Ram",
-        "Id"  : 2
+        "Id"  : 2,
+        "address" : {
+            "street" : "2 Pitt St"
+        }
     },
     {
         "name": "Hari Prabhu",
-        "Id"  : 3
+        "Id"  : 3,
+        "address" : {
+            "street" : "2 Elizabeth St"
+        }
     },
     {
         "name": "Govinda",
-        "Id"  : 4
+        "Id"  : 4,
+        "address" : {
+            "street" : "2 Oxford St"
+        }
     }
-
 ]
