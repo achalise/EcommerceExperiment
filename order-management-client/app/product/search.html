@@ -13,7 +13,7 @@
 
             <ul class="phones">
                 <li ng-repeat="product in products  | filter:query">
-                    <span>{{product.details.title}}</span> <a href="#">View Details</a>
+                    <span>{{product.details.title}}</span> <a href="#/product/{{product.sku}}">View Details</a>
                 </li>
             </ul>
 

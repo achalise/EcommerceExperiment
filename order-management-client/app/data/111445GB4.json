@@ -1,0 +1,12 @@
+{
+    "sku": "111445GB4",
+    "type": "Film",
+    "qty" : 60,
+    "price" : 15,
+    "details":
+    {
+        "title": "Mad Max",
+        "genre": ["Action"],
+        "director": ["Mel Gibson"]
+    }
+}
