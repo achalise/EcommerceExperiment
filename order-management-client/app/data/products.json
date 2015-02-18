@@ -1,0 +1,26 @@
+[
+    {
+        "sku": "111445GB3",
+        "type" : "Books",
+        "qty" : 100,
+        "price" : 25,
+        "details" :
+        {
+            "subcategory" : "Fiction",
+            "title": "A Tale of Two Cities",
+            "author": "Charles Dickens"
+        }
+    },
+    {
+        "sku": "111445GB4",
+        "type": "Film",
+        "qty" : 60,
+        "price" : 15,
+        "details":
+        {
+            "title": "Mad Max",
+            "genre": ["Action"],
+            "director": ["Mel Gibson"]
+        }
+    }
+]

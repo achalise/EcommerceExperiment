@@ -7,7 +7,8 @@ angular.module('myApp', [
   'myApp.version',
   'orderManagement.home',
   'orderManagement.customer',
-  'orderManagement.order'
+  'orderManagement.order',
+  'orderManagement.product'
 ]).
 config(['$routeProvider', function($routeProvider) {
   $routeProvider.otherwise({redirectTo: '/home'});
