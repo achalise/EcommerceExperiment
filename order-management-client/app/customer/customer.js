@@ -14,9 +14,11 @@ angular.module('orderManagement.customer', ['ngRoute'])
           });
     }])
 
-    .controller('CustomerDetailCtrl', ['$scope', '$routeParams', '$http', function($scope, $routeParams, $http) {
+    .controller('CustomerDetailCtrl', ['$scope', '$routeParams', '$http', '$log', function($scope, $routeParams, $http, $log) {
+        $scope.$log = $log;
         $http.get('data/customers.json').success(function(data) {
             $scope.customer = data[$routeParams.customerId - 1];
+            $log.info("Displaying customer" + $scope.customer.name);
         });
         $scope.customerId = $routeParams.customerId;
     }])

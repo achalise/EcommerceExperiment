@@ -25,9 +25,8 @@ angular.module('orderManagement.product', ['ngRoute'])
             $scope.param = $routeParams.productId;
         });
     }])
-    .controller('ProductDetail2Ctrl', ['$scope', '$routeParams', 'ProductService',
-    function($scope, $routeParams, ProductService) {
-        $scope.product = ProductService.get({productId: $routeParams.productId});
+    .controller('ProductDetail2Ctrl', ['$scope', '$routeParams', 'ProductService', function($scope, $routeParams, ProductService) {
+            $scope.product = ProductService.get({productId: $routeParams.productId});
     }]);
 
 
