@@ -11,7 +11,12 @@ angular.module('orderManagement.customer', ['ngRoute'])
           when('/customers', {
             templateUrl: 'customer/search.html',
             controller: 'CustomerCtrl'
-          });
+          }).
+          when('/customers/search', {
+                templateUrl: 'customer/search.html',
+                controller: 'CustomerCtrl'
+            }
+          );
     }])
 
     .controller('CustomerDetailCtrl', ['$scope', '$routeParams', '$http', '$log', function($scope, $routeParams, $http, $log) {
@@ -26,6 +31,10 @@ angular.module('orderManagement.customer', ['ngRoute'])
         $http.get('data/customers.json').success(function(data) {
             $scope.customers = data;
         });
-    }]);
+        console.log("test");
+        $scope.submitForm = function() {
 
+            console.log("Calling submit form " + $scope.firstName);
+        }
+    }]);
 
