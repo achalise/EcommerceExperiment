@@ -1,4 +1,4 @@
-package example.core.data.customer;
+package example.core.domain.customer;
 
 import org.springframework.data.mongodb.repository.MongoRepository;
 

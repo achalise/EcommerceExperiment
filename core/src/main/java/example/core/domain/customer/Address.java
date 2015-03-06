@@ -1,4 +1,4 @@
-package example.core.data.customer;
+package example.core.domain.customer;
 
 public class Address {
     private String street;
